@@ -1,0 +1,16 @@
+{
+  "name": "@yue/preferences_manager",
+  "version": "1.0.0",
+  "description": "用户首选项 preferences 同步方法封装，实现数据持久化，简化创建，易于使用",
+  "repository": "https://github.com/1ilI/PreferencesManager_harmony.git",
+  "homepage": "https://github.com/1ilI/PreferencesManager_harmony",
+  "main": "Index.ets",
+  "author": "yue",
+  "license": "Apache-2.0",
+  "keywords": [
+    "用户首选项",
+    "Preferences",
+    "同步方法",
+  ],
+  "dependencies": {}
+}

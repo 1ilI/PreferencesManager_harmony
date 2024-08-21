@@ -12,7 +12,7 @@ PreferencesManager 是基于系统 Preferences 封装的，通过用户首选项
 
 最后本库也露出了 `preferences.Preferences` 实例，可供集成方调用系统的相关方法。
 
-![demo](./preferences_demo.gif)
+![demo](../preferences_demo.gif)
 
 ## 相关特性
 * 适配 HarmonyOS，API 12+
