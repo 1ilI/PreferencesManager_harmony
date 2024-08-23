@@ -28,6 +28,7 @@ PreferencesManager 是基于系统 Preferences 封装的，通过用户首选项
 
 | 方法类型 | 方法名             | 作用                                           |
 | :------- | :----------------- | :--------------------------------------------- |
+| 静态方法 | setDefManager      | 设置默认管理类的 Preferences 名称 和 Context   |
 | 静态方法 | defManager         | 默认创建的 PreferencesManager 管理类           |
 | 静态方法 | hasManager         | 自定义的 PreferencesManager 是否存在           |
 | 静态方法 | removeManager      | 移除自定义的 PreferencesManager                |

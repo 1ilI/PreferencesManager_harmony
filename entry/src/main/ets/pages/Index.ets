@@ -9,6 +9,9 @@ struct Index {
   @State message: string = "";
 
   aboutToAppear(): void {
+    // 设置默认 manager 的 preferences 名称
+    // PreferencesManager.setDefManager({ preferencesName: "myPreferences" });
+
     PreferencesManager.defManager.onChange((changedKey: string) => {
       this.message = '监听所有数据变更\n变更数据的 key 为：' + changedKey;
     });

@@ -54,6 +54,14 @@ export class PreferencesManager {
   private static _defManager: PreferencesManager;
 
   /**
+   * 设置默认 Manager 的 名称 和 Context
+   * @param params
+   */
+  public static setDefManager(params: CreateManagerParams) {
+    PreferencesManager._defManager = new PreferencesManager(params);
+  }
+
+  /**
    * 默认的 PreferencesManager 实例
    * @returns
    */
