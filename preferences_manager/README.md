@@ -176,6 +176,9 @@ PreferencesManager.defManager.preferences?.put("key", "value", (error: BusinessE
 });
 ```
 
+### 注意事项
+* 直接使用 `PreferencesManager.defManager` 或 `new PreferencesManager()` 等相关方法无 preferencesContext 参数初始化时，在调用前请确保系统方法 `getContext()` 有值。
+
 ## 最后
 本库基于 [Apache License 2.0](https://github.com/1ilI/PreferencesManager_harmony/blob/master/preferences_manager/LICENSE) 协议，如果你发现了任何问题或者有改进的建议，欢迎创建 [issue](https://github.com/1ilI/PreferencesManager_harmony/issues) 或者提交 [PR](https://github.com/1ilI/PreferencesManager_harmony/pulls)。
 

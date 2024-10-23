@@ -1,6 +1,9 @@
 
 ## 版本更新记录
 
+### 2024/10/23 - 1.0.2
+优化 preferencesContext 参数初始化
+
 ### 2024/08/23 - 1.0.1
 支持设置默认管理类的 Preferences 名称 和 Context
 

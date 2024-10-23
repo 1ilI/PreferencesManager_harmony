@@ -36,19 +36,29 @@ export class PreferencesManager {
     return this._preferences;
   }
 
-  private _preferencesContext: Context = getContext().getApplicationContext();
+  private _preferencesContext?: Context;
   private _preferencesName: string = PREFERENCES_NAME;
   private _preferences: preferences.Preferences | undefined;
 
   constructor(params?: CreateManagerParams) {
     if (params?.preferencesContext) {
       this._preferencesContext = params.preferencesContext;
+    } else {
+      try {
+        this._preferencesContext = getContext().getApplicationContext();
+      } catch (e) {
+        console.error(`[preferences_manager]:${e.message}\n无 preferencesContext 参数初始化时，调用前请确保 getContext() 有值`);
+      }
     }
+
     if (params?.preferencesName) {
       this._preferencesName = params.preferencesName;
     }
     let options: preferences.Options = { name: this._preferencesName };
-    this._preferences = preferences.getPreferencesSync(this._preferencesContext, options);
+    // 确保 context 存在再创建 preferences
+    if (this._preferencesContext) {
+      this._preferences = preferences.getPreferencesSync(this._preferencesContext, options);
+    }
   }
 
   private static _defManager: PreferencesManager;
